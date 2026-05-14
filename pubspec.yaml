@@ -1,0 +1,45 @@
+name: course_system
+description: "AI-Powered Education Platform - Multi-School Learning Ecosystem"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
+  cloud_firestore: ^5.6.5
+  firebase_storage: ^12.4.4
+
+  provider: ^6.1.2
+  google_generative_ai: ^0.4.6
+
+  file_picker: ^8.1.7
+  path_provider: ^2.1.5
+  http: ^1.3.0
+  cached_network_image: ^3.4.1
+
+  intl: ^0.20.2
+  uuid: ^4.5.1
+  share_plus: ^10.1.4
+  url_launcher: ^6.3.1
+
+  fl_chart: ^0.70.2
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
