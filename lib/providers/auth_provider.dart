@@ -16,14 +16,18 @@ class AuthProvider extends ChangeNotifier {
   bool get isLoggedIn => _user != null;
 
   AuthProvider() {
-    _authService.authState.listen((firebaseUser) async {
-      if (firebaseUser != null) {
-        _user = await _authService.getUserData(firebaseUser.uid);
-      } else {
-        _user = null;
-      }
-      notifyListeners();
-    });
+    try {
+      _authService.authState.listen((firebaseUser) async {
+        if (firebaseUser != null) {
+          _user = await _authService.getUserData(firebaseUser.uid);
+        } else {
+          _user = null;
+        }
+        notifyListeners();
+      });
+    } catch (_) {
+      _isLoading = false;
+    }
   }
 
   Future<bool> signUp({
